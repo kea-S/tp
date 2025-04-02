@@ -24,14 +24,14 @@ public class FindCommand extends Command {
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all persons whose names, tags, or phone "
             + "number contain any of "
             + "the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
-            + "Parameters: EITHER " + PREFIX_NAME + "KEYWORD [MORE KEYWORDS] OR "
-            + PREFIX_PHONE + "KEYWORD [MORE_KEYWORDS] OR "
-            + PREFIX_ROLE + "KEYWORD [MORE KEYWORDS] OR "
-            + PREFIX_TAG + "KEYWORD [MORE KEYWORDS] \n"
-            + "Example for name search: " + COMMAND_WORD + " " + PREFIX_NAME + "alice bob\n"
+            + "Parameters: EITHER " + PREFIX_NAME + "KEYWORD " + PREFIX_NAME + "[ANOTHER KEYWORD]... OR "
+            + PREFIX_PHONE + "KEYWORD " + PREFIX_PHONE + "[ANOTHER KEYWORD]... OR "
+            + PREFIX_ROLE + "KEYWORD " + PREFIX_ROLE + "[ANOTHER KEYWORD]... OR "
+            + PREFIX_TAG + "KEYWORD " + PREFIX_TAG + "[ANOTHER KEYWORD]... \n"
+            + "Example for name search: " + COMMAND_WORD + " " + PREFIX_NAME + "alice " + PREFIX_NAME + "bob\n"
             + "Example for phone search: " + COMMAND_WORD + " " + PREFIX_PHONE + "81293829\n"
-            + "Example for phone search: " + COMMAND_WORD + " " + PREFIX_ROLE + "Media\n"
-            + "Example for tag search: " + COMMAND_WORD + " " + PREFIX_TAG + "friends colleagues";
+            + "Example for role search: " + COMMAND_WORD + " " + PREFIX_ROLE + "event organiser\n"
+            + "Example for tag search: " + COMMAND_WORD + " " + PREFIX_TAG + "friends " + PREFIX_TAG + "colleagues";
 
     private final Predicate<Person> predicate;
 
